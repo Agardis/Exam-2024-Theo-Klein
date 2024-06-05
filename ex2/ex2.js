@@ -5,8 +5,14 @@ var list1 = [
     {FirstName: 'George', lastName: 'B.', pays: 'Angleterre', continent: 'Europe', age: 81, langue: 'C', Repas: 'végétarien'},
     ];
 
-const regimes = (list) => {
-    return list.map((dev) => dev.Repas)
-}
+const regimes = (list) => list.reduce((acc, curr) => {
+        if (Object.keys(acc).find((key) => key == curr.Repas))
+        {
+            acc[curr.Repas] += 1
+            return acc
+        }
+        Object.assign(acc, {[curr.Repas]: 1})
+        return acc
+    }, {})
 
 console.log(regimes(list1))

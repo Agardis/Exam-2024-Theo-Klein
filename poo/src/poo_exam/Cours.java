@@ -60,16 +60,16 @@ public class Cours implements Participable{
 		System.out.println("Titre: " 			+ this.titre 		+ "\n"
 						+ "Formateur: " 		+ this.formateur 	+ "\n"
 						+ "Durée: " 			+ this.duree 		+ "\n"
-						+ "Places Restantes: " 	+ this.placesRestantes);
+						+ "Places Restantes: " 	+ this.placesRestantes + "\n");
 	}
 
 	@Override
-	public void Participer() {
+	public void participer() {
 		this.placesRestantes -= 1;
 	}
 
 	@Override
-	public void Quitter() {
+	public void quitter() {
 		this.placesRestantes += 1;
 	}
 }

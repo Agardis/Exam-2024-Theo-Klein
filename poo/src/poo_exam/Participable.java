@@ -2,7 +2,7 @@ package poo_exam;
 
 public interface Participable {
 	
-	public void Participer();
+	public void participer();
 	
-	public void Quitter();
+	public void quitter();
 }

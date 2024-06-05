@@ -1,6 +1,6 @@
 package poo_exam;
 
-public class Cours {
+public class Cours implements Participable{
 	private String titre;
 	private String formateur;
 	private int duree;
@@ -61,5 +61,15 @@ public class Cours {
 						+ "Formateur: " 		+ this.formateur 	+ "\n"
 						+ "Durée: " 			+ this.duree 		+ "\n"
 						+ "Places Restantes: " 	+ this.placesRestantes);
+	}
+
+	@Override
+	public void Participer() {
+		this.placesRestantes -= 1;
+	}
+
+	@Override
+	public void Quitter() {
+		this.placesRestantes += 1;
 	}
 }
